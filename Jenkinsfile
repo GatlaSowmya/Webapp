@@ -51,6 +51,7 @@ pipeline {
                                 ssh ubuntu@15.188.246.110 'docker run -d --name sample -p 8080:8080 sowmya018/jenkins_task:$BUILD_ID'
                             '''
                         }
-            }
-    }
+                 }
+             }
+}
 }
