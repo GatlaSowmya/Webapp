@@ -1,5 +1,9 @@
 pipeline {
     agent any
+    environment {
+        USER = 'sowmya018'
+        PASS = 'docker@018'
+    }
    tools {
         // Install the Maven version configured as "M3" and add it to the path.
         maven "maven"
@@ -23,9 +27,9 @@ pipeline {
         }
         stage('Dockerhublogin') {
             steps {
-                withCredentials([usernamePassword(credentialsId: 'dockerhub_credentials', passwordVariable: 'PASS', usernameVariable: 'USER')])  {
-              sh 'docker login'
-        }
+               
+              sh 'docker login -u $USER -P $PASS'
+        
             }
         }
         stage('Dockerhubpush') {
