@@ -1,7 +1,7 @@
 FROM tomcat:latest
 
-LABEL maintainer="Anil Kumar"
+LABEL maintainer="gatla Sowmya"
 
-#ADD ./target/AnilKumar-1.0.war /usr/local/tomcat/webapps/
+#ADD ./target/Sowmya-1.0.war /usr/local/tomcat/webapps/
 
 EXPOSE 8080
