@@ -20,6 +20,11 @@ pipeline {
                 sh 'mvn clean package'
             }
         }
+         stage('test') {
+            steps {
+                sh 'mvn sonar:sonar'
+            }
+        }
         stage('ImageBuild') {
             steps {
                 sh 'docker build -t sowmya018/jenkins_task:$BUILD_ID .'
