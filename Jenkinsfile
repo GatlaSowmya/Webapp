@@ -42,6 +42,15 @@ pipeline {
                 sh 'docker push sowmya018/jenkins_task:$BUILD_ID'
             }
         }
-        
+
+        stage('deploy'){
+            steps{
+                 sshagent(['jenkins']) {
+                            sh '''
+                                ssh ubuntu@15.188.246.110 'docker pull sowmya018/jenkins_task:$BUILD_ID'
+                                ssh ubuntu@15.188.246.110 'docker run -d --name sample -p 8080:8080 sowmya018/jenkins_task:$BUILD_ID'
+                            '''
+                        }
+            }
     }
 }
