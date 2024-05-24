@@ -28,7 +28,7 @@ pipeline {
         stage('Dockerhublogin') {
             steps {
                
-              sh 'docker login -u $USER -P $PASS'
+              sh 'docker login -u $USER --password-stdin $PASS'
         
             }
         }
