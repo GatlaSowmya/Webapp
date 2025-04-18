@@ -58,6 +58,13 @@
                 <!-- Specify the Tomcat manager URL -->
                 <url>http://13.233.168.246:8080/manager/text</url>
                 <server>myserver</server>
+                <servers>
+  <server>
+    <id>myserver</id>
+    <username>admin</username>
+    <password>admin123</password>
+  </server>
+</servers>
             </configuration>
         </plugin>
             <plugin>
