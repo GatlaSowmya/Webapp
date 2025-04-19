@@ -56,7 +56,7 @@
                 <!-- Set the context path (optional) -->
                 <path>/AnilKumar</path>
                 <!-- Specify the Tomcat manager URL -->
-                <url>http://13.233.168.246:8080/manager/text</url>
+                <url>http:http://65.2.146.147:8080/manager/text</url>
                 <server>myserver</server>
             </configuration>
         </plugin>
