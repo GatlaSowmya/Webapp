@@ -72,7 +72,7 @@ mvn clean verify sonar:sonar \
                 <version>2.2</version>
                 <configuration>
                     <path>/AnilKumar</path>
-                    <url>http://13.233.168.246:8080/manager/text</url>
+                    <url>http://65.2.149.13:8080/manager/text</url>
                     <server>myserver</server>
                 </configuration>
             </plugin>
